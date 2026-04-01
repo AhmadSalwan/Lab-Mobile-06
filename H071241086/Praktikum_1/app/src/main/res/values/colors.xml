@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Background -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>  <!-- Teks -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#8E8E8E</color>
+
+    <!-- Tombol -->
+    <color name="button_background">#F2F2F2</color>
+    <color name="button_text">#000000</color>
+
+    <!-- Garis & Border -->
+    <color name="divider">#DBDBDB</color>
+    <color name="border_sorotan">#DBDBDB</color>
+
+    <!-- Badge notifikasi -->
+    <color name="badge_red">#FF3040</color>
+
+    <!-- Navbar -->
+    <color name="navbar_active">#000000</color>
+    <color name="navbar_inactive">#8E8E8E</color>
+
+    <!-- Background aplikasi -->
+    <color name="background">#FFFFFF</color>
+
+</resources>

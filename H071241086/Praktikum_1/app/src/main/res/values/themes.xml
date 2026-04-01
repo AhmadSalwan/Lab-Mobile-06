@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Theme.ProfilInstagram"
+        parent="Theme.MaterialComponents.Light.NoActionBar">  <!-- Warna utama -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <!-- Tambahan style untuk foto profil bulat -->
+    <style name="CircleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Nama Aplikasi -->
+    <string name="app_name">ProfilInstagram</string>  <!-- Info Profil -->
+    <string name="username">stfniin</string>
+    <string name="nama_lengkap">Siti Nur Halisa Tahir</string>
+    <string name="bio">Let it go</string>
+
+    <!-- Statistik -->
+    <string name="jumlah_postingan">6</string>
+    <string name="jumlah_pengikut">72</string>
+    <string name="jumlah_mengikuti">540</string>
+    <string name="label_postingan">postingan</string>
+    <string name="label_pengikut">pengikut</string>
+    <string name="label_mengikuti">mengikuti</string>
+
+    <!-- Tombol -->
+    <string name="btn_edit_profil">Edit profil</string>
+    <string name="btn_bagikan_profil">Bagikan profil</string>
+
+    <!-- Sorotan -->
+    <string name="sorotan_traveling">Traveling</string>
+
+    <!-- Edit Profil -->
+    <string name="hint_nama">Nama</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_bio">Bio</string>
+    <string name="hint_website">Website</string>
+    <string name="btn_simpan">Simpan</string>
+    <string name="label_edit_profil">Edit Profil</string>
+    <string name="label_ganti_foto">Ganti foto profil</string>
+
+</resources>
