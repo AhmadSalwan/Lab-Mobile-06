@@ -1,11 +1,14 @@
 package com.example.tp3_h071241076;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class HomeFragment extends Fragment {
 
@@ -23,6 +28,11 @@ public class HomeFragment extends Fragment {
     private SearchView searchView;
     private Spinner spinnerGenre;
     private Spinner spinnerRating;
+    private ProgressBar progressBar;
+
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
 
     private String currentSearchText = "";
     private String currentSelectedGenre = "Semua Genre";
@@ -41,6 +51,7 @@ public class HomeFragment extends Fragment {
         searchView = view.findViewById(R.id.search_view);
         spinnerGenre = view.findViewById(R.id.spinner_genre);
         spinnerRating = view.findViewById(R.id.spinner_rating);
+        progressBar = view.findViewById(R.id.progressBar);
 
         rvBooks.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -121,24 +132,43 @@ public class HomeFragment extends Fragment {
     }
 
     private void applyFilter() {
-        ArrayList<Book> filteredList = new ArrayList<>();
+        progressBar.setVisibility(View.VISIBLE);
+        rvBooks.setVisibility(View.GONE);
 
-        for (Book book : DataSource.books) {
-            boolean matchSearch = book.getTitle().toLowerCase().contains(currentSearchText.toLowerCase());
-            boolean matchGenre = currentSelectedGenre.equals("Semua Genre") || book.getGenre().equals(currentSelectedGenre);
-            boolean matchRating = true;
+        final String textToSearch = currentSearchText.toLowerCase();
+        final String genreToSearch = currentSelectedGenre;
+        final String ratingToSearch = currentSelectedRating;
 
-            if (!currentSelectedRating.equals("Semua Rating")) {
-                int roundedRating = Math.round(book.getRating());
-                String expectedRating = "Bintang " + roundedRating;
-                matchRating = currentSelectedRating.equals(expectedRating);
+        executorService.execute(() -> {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
 
-            if (matchSearch && matchGenre && matchRating) {
-                filteredList.add(book);
-            }
-        }
+            ArrayList<Book> filteredList = new ArrayList<>();
 
-        bookAdapter.setFilteredList(filteredList);
+            for (Book book : DataSource.books) {
+                boolean matchSearch = book.getTitle().toLowerCase().contains(textToSearch);
+                boolean matchGenre = genreToSearch.equals("Semua Genre") || book.getGenre().equals(genreToSearch);
+                boolean matchRating = true;
+
+                if (!ratingToSearch.equals("Semua Rating")) {
+                    int roundedRating = Math.round(book.getRating());
+                    String expectedRating = "Bintang " + roundedRating;
+                    matchRating = ratingToSearch.equals(expectedRating);
+                }
+
+                if (matchSearch && matchGenre && matchRating) {
+                    filteredList.add(book);
+                }
+            }
+
+            handler.post(() -> {
+                progressBar.setVisibility(View.GONE);
+                rvBooks.setVisibility(View.VISIBLE);
+                bookAdapter.setFilteredList(filteredList);
+            });
+        });
     }
 }
