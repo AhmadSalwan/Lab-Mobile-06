@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="primary">#000000</color>
+    <color name="primaryDark">#000000</color>
+    <color name="accent_yellow">#E65100</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#FFFFFF</color>
+    <color name="card">#F5F5F5</color>
+    <color name="bottom_nav_bg">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#555555</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Switch Mode UI -->
+    <color name="mode_switch_bg_day">#EEEEEE</color>
+    <color name="mode_switch_bg_night">#222222</color>
+</resources>
