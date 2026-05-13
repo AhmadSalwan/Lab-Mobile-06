@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Library-app</string>
+    <string name="add_new_book">Add New Book</string>
+    <string name="upload_cover">ATTACH BOOK COVER</string>
+    <string name="label_title">BOOK TITLE</string>
+    <string name="label_author">AUTHOR</string>
+    <string name="label_year">RELEASE YEAR</string>
+    <string name="label_synopsis">SYNOPSIS</string>
+    <string name="hint_title">Enter book title</string>
+    <string name="hint_author">Enter author name</string>
+    <string name="hint_year">e.g. 2024</string>
+    <string name="hint_synopsis">Write a brief description...</string>
+    <string name="btn_add_to_library">ADD TO COLLECTION</string>
+    <string name="published_date">Published: %1$s</string>
+</resources>
