@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="2dp"
+        android:background="@color/bg_color">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/text_color"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Postingan"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Post Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_default_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="username"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:tint="@color/text_color"
+                    android:src="@drawable/ic_more" />
+
+            </LinearLayout>
+
+            <!-- Post Image -->
+            <ImageView
+                android:id="@+id/iv_post"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_image_placeholder" />
+
+            <!-- Actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/text_color"
+                    android:src="@drawable/ic_heart"
+                    android:padding="2dp" />
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/text_color"
+                    android:src="@drawable/ic_comment"
+                    android:layout_marginStart="14dp"
+                    android:padding="2dp" />
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/text_color"
+                    android:src="@drawable/ic_send"
+                    android:layout_marginStart="14dp"
+                    android:padding="2dp" />
+
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_bookmark"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/text_color"
+                    android:src="@drawable/ic_bookmark"
+                    android:padding="2dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_like_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="4dp"
+                android:text="0 suka"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/tv_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="4dp"
+                android:textSize="13sp"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                android:textSize="11sp"
+                android:textColor="@color/ig_gray" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
