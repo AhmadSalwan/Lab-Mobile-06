@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#9b59b6</color>
+    <color name="colorSecondary">#c39bd3</color>
+
+    <color name="bgColor">#0d0d0d</color>
+    <color name="cardColor">#1a1a1a</color>
+    <color name="strokeColor">#2a2a2a</color>
+    <color name="textColorPrimary">#f0f0f0</color>
+    <color name="textColorSecondary">#888888</color>
+    <color name="inputBg">#1a1a1a</color>
+</resources>

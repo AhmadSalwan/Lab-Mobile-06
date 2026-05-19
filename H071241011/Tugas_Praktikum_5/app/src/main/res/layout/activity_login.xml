@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="36dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="☠"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:background="@drawable/bg_button_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SKIN MATCH"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:textColor="@color/textColorPrimary"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEMUKAN YANG SEPERTIMU"
+                android:textSize="11sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/inputBg"
+            android:padding="4dp"
+            android:layout_marginBottom="28dp">
+            <Button
+                android:id="@+id/tabLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Masuk"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:stateListAnimator="@null" />
+            <Button
+                android:id="@+id/tabRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Daftar"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent"
+                android:stateListAnimator="@null" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/formLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NIM"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/inputNimLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:hint="Masukkan NIM kamu"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/inputPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:hint="••••••••"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:layout_marginBottom="20dp" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Masuk →"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_primary"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/inputNameReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:hint="Nama sesuai KTP"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NIM"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/inputNimReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:hint="Nomor Induk Mahasiswa"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/inputPasswordReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:hint="Min. 8 karakter"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:layout_marginBottom="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Warna Kulit"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="20dp">
+
+                    <RadioGroup
+                        android:id="@+id/rgSkinColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbHitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⬛  Hitam"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="15sp"
+                            android:checked="true"
+                            android:layout_marginBottom="10dp"
+                            android:buttonTint="@color/colorPrimary" />
+
+                        <RadioButton
+                            android:id="@+id/rbPutih"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⬜  Putih"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="15sp"
+                            android:buttonTint="@color/colorPrimary" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buat Akun →"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_primary"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
