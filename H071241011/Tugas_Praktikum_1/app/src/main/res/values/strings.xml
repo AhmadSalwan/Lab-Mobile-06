@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Praktikum Mobile 1</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="share_profile">Bagikan Profile</string>
+    <string name="posts">postingan</string>
+    <string name="followers">pengikut</string>
+    <string name="following">mengikuti</string>
+</resources>
